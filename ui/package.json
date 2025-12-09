@@ -1,0 +1,62 @@
+{
+    "name": "ui",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@emotion/react": "^11.13.3",
+        "@emotion/styled": "^11.13.0",
+        "@mui/icons-material": "^6.1.0",
+        "@mui/material": "^6.1.0",
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "antd": "^5.20.6",
+        "axios": "^1.7.7",
+        "jwt-decode": "^4.0.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.26.2",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "npm run prettier && react-scripts start",
+        "build": "npm run prettier && react-scripts build",
+        "test": "npm run prettier && react-scripts test",
+        "eject": "npm run prettier && react-scripts eject",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "prettier": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "semi": true,
+        "printWidth": 80
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "eslint": "^8.57.0",
+        "eslint-config-react-app": "^7.0.1",
+        "eslint-plugin-react": "^7.35.0",
+        "globals": "^15.9.0",
+        "prettier": "^3.3.3",
+        "react-scripts": "^5.0.1"
+    }
+}
