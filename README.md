@@ -1,4 +1,4 @@
-# SWEN90007 tv_addicts 
+# SWEN90007
 
 
 ## About the Project
