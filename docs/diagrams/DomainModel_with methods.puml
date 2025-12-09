@@ -1,0 +1,67 @@
+@startuml Domain Model with Methods
+
+
+Student <|-- ClubAdmin
+StudentClub "1" -- "1..*" ClubAdmin : manages <
+StudentClub "0..*" -- "1..*" Student : member of <
+Student "1" -- "0..*" RSVP_Ticket : obtain >
+StudentClub "1" -- "0..1" FundingApplication : creates >
+ClubAdmin "1..*" -- "0..*" Event : creates >
+StudentClub "1..*" -- "0..*" Event : has >
+Event "0..*" -- "1" Venue : located at >
+Event "1" -- "0..*" RSVP_Ticket : has >
+FacultyAdministrator "1..*" -- "0..*" FundingApplication : review >
+
+
+class Student {
+  student_id
+  firstName
+  lastName
+  email
+  list_of_clubs
+}
+
+class ClubAdmin {
+  club
+}
+
+class StudentClub {
+  name
+  list_of_members
+}
+
+class Event {
+  hosting_club
+  title
+  description
+  capacity
+  venue
+  cost
+  date
+  time
+}
+
+class RSVP_Ticket {
+  applicant
+  attendee
+  event
+}
+
+class FundingApplication {
+  student_club
+  amount
+  description
+  date
+  status
+}
+
+class FacultyAdministrator {
+  staff_id
+  name
+}
+
+class Venue {
+  location
+  capacity
+}
+@enduml
